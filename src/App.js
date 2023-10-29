@@ -85,7 +85,7 @@ function App() {
       <p>
         Developed by{" "}
         <a
-          href="https://github.com/rishi-singh26/Random-Identities-React"
+          href="https://github.com/rishi-singh26/Random-Id-React"
           target="_blank"
           rel="noreferrer"
         >
