@@ -1,38 +1,140 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap");
+
+* {
+  font-family: "Martian Mono", monospace;
+  background-color: #000;
+  color: #ddd;
+}
+
+:host {
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.identities {
+  overflow-y: scroll;
+  height: 75vh;
+  border: 1px solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @media only screen and (max-width: 600px) {
+  .identities {
+    overflow-y: scroll;
+    height: 75vh;
+    border: 1px solid #ddd;
+    margin-left: 0%;
+    margin-right: 0%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+} */
+
+.identities::-webkit-scrollbar {
+  width: 12px;
+}
+
+.identities::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.identities::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+
+.identities::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.identities::-webkit-scrollbar-button {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 15px dashed #ddd;
+  padding: 10px 10px;
+}
+
+.end-empty-box {
+  height: 150px;
+}
+
+.activity-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  margin-bottom: 10px;
+  color: #0051ff;
+}
+
+.another-button {
+  /* Variables */
+  --button_color: #000;
+  --button_outline_color: #ddd;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0px;
+  background: var(--button_outline_color);
+  margin-top: 15px;
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: 0px;
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 5px;
 }
